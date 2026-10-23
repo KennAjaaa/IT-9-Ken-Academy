@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071c35">
+  <title>OceanGlass Academy — Tutorial Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="grain"></div>
+  <div class="app-shell">
+    <aside class="sidebar glass-panel" id="sidebar">
+      <a class="brand" href="#" data-view="home" aria-label="OceanGlass Academy home">
+        <span class="brand-mark"><span>◈</span></span>
+        <span class="brand-copy"><b>OceanGlass</b><small>ACADEMY / 27</small></span>
+      </a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <button class="nav-item active" data-view="home"><span class="nav-icon">⌂</span><span>Beranda</span><kbd>H</kbd></button>
+        <button class="nav-item" data-view="explore"><span class="nav-icon">⌕</span><span>Jelajahi tutorial</span><kbd>E</kbd></button>
+        <button class="nav-item" data-view="saved"><span class="nav-icon">♡</span><span>Disimpan</span><span class="nav-count" id="savedCount">0</span></button>
+        <button class="nav-item" data-view="progress"><span class="nav-icon">◴</span><span>Progres belajar</span></button>
+        <button class="nav-item" data-view="quiz"><span class="nav-icon">✳</span><span>Latihan cepat</span></button>
+      </nav>
+      <div class="side-label side-label-row"><span>KATEGORI</span><button class="tiny-icon" id="manageCategories" title="Lihat semua kategori">＋</button></div>
+      <nav id="categoryNav" class="category-nav" aria-label="Kategori tutorial"></nav>
+      <div class="sidebar-bottom">
+        <div class="streak-card glass-inset">
+          <div class="streak-top"><span class="streak-flame">✦</span><span>LEARNING STREAK</span><span class="streak-live"></span></div>
+          <div class="streak-number"><b id="streakNumber">1</b><small>hari semangat</small></div>
+          <div class="streak-bars" aria-label="Aktivitas belajar mingguan"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <p>Pelan-pelan, yang penting konsisten.</p>
+        </div>
+        <button class="nav-item settings-nav" data-action="settings"><span class="nav-icon">⚙</span><span>Pengaturan</span></button>
+        <div class="profile-row"><div class="avatar" id="avatarInitial">K</div><div class="profile-copy"><b id="profileName">Learner</b><small>Ocean explorer</small></div><button class="tiny-icon" id="editProfile" title="Ubah nama profil">•••</button></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="mobile-brand"><button class="icon-button" id="mobileMenu" aria-label="Buka menu">☰</button><span class="brand-mark small-mark">◈</span><b>OceanGlass</b></div>
+        <div class="breadcrumbs"><span>Academy</span><span class="crumb-slash">/</span><b id="breadcrumbCurrent">Beranda</b></div>
+        <div class="top-actions">
+          <label class="global-search glass-inset" for="globalSearch"><span>⌕</span><input id="globalSearch" type="search" placeholder="Cari tutorial..." autocomplete="off"><kbd>Ctrl K</kbd><button id="clearSearch" class="clear-search" aria-label="Hapus pencarian">×</button></label>
+          <button class="icon-button glass-inset" id="themeToggle" title="Ganti mode tampilan" aria-label="Ganti mode tampilan">☼</button>
+          <button class="icon-button glass-inset" id="helpButton" title="Bantuan">?</button>
+        </div>
+      </header>
+
+      <div class="content-scroll" id="contentScroll">
+        <section class="view active" id="homeView">
+          <section class="hero glass-panel">
+            <div class="hero-copy">
+              <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR KNOWLEDGE, IN FLOW</div>
+              <h1>Belajar hal baru.<br><span>Dengan caramu.</span></h1>
+              <p>Ruang tutorial serbaguna dengan nuansa laut, antarmuka kaca, dan langkah-langkah yang mudah diikuti.</p>
+              <div class="hero-actions"><button class="button-primary" id="startLearning">Mulai belajar <span>↗</span></button><button class="button-secondary" id="randomTutorial">✦ Pilihkan untukku</button></div>
+              <div class="hero-proof"><div class="avatar-stack"><i>✦</i><i>⌘</i><i>◉</i></div><span><b id="heroTutorialCount">300+</b> ide belajar untuk dijelajahi</span></div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+              <div class="orb orb-back"></div><div class="orb orb-main"><div class="orb-shine"></div><div class="orb-ring"></div><div class="orb-core">◈</div></div>
+              <div class="float-card float-card-top glass-inset"><span class="float-icon">✧</span><div><b>Stay curious</b><small>Setiap hari, satu hal baru</small></div></div>
+              <div class="float-card float-card-bottom glass-inset"><div class="mini-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div><b>Learning flow</b><small>Progress kamu bergerak</small></div></div>
+              <div class="orbit-dot orbit-dot-one"></div><div class="orbit-dot orbit-dot-two"></div>
+            </div>
+            <div class="hero-bottomline"><span>01 — EXPLORE</span><span>DESIGNED FOR CURIOSITY</span><span>SCROLL TO DISCOVER ↓</span></div>
+          </section>
+
+          <section class="stats-grid">
+            <article class="stat-card glass-panel"><div class="stat-head"><span>Semua tutorial</span><span class="stat-icon cyan">◈</span></div><div class="stat-value" id="statTotal">850</div><div class="stat-foot"><span class="status-dot"></span>Siap dijelajahi</div><div class="stat-spark spark-one"></div></article>
+            <article class="stat-card glass-panel"><div class="stat-head"><span>Sudah selesai</span><span class="stat-icon violet">✓</span></div><div class="stat-value" id="statCompleted">0</div><div class="stat-foot"><span id="completedPercent">0%</span> dari semua tutorial</div><div class="stat-spark spark-two"></div></article>
+            <article class="stat-card glass-panel"><div class="stat-head"><span>Disimpan</span><span class="stat-icon blue">♡</span></div><div class="stat-value" id="statSaved">0</div><div class="stat-foot">Untuk dibaca nanti</div><div class="stat-spark spark-three"></div></article>
+            <article class="stat-card glass-panel"><div class="stat-head"><span>Waktu fokus</span><span class="stat-icon aqua">◷</span></div><div class="stat-value"><span id="focusMinutes">00</span><small> min</small></div><div class="stat-foot">Sesi fokus tercatat</div><div class="stat-spark spark-four"></div></article>
+          </section>
+
+          <section class="section-block">
+            <div class="section-heading"><div><div class="eyebrow">FIND YOUR CURRENT</div><h2>Mood belajar kamu</h2><p>Pilih suasana yang cocok dengan energimu hari ini.</p></div><button class="text-button" data-view="explore">Lihat semua <span>↗</span></button></div>
+            <div class="mood-grid">
+              <button class="mood-card mood-focus" data-mood="focus"><span class="mood-orbit">◎</span><span class="mood-content"><small>01 / DEEP WORK</small><b>Fokus maksimal</b><em>Untuk belajar tanpa distraksi</em></span><span class="mood-arrow">↗</span></button>
+              <button class="mood-card mood-creative" data-mood="creative"><span class="mood-orbit">✧</span><span class="mood-content"><small>02 / CREATE</small><b>Mode kreatif</b><em>Eksperimen dan ide baru</em></span><span class="mood-arrow">↗</span></button>
+              <button class="mood-card mood-calm" data-mood="calm"><span class="mood-orbit">〰</span><span class="mood-content"><small>03 / SLOW FLOW</small><b>Santai dulu</b><em>Pelajari sesuatu pelan-pelan</em></span><span class="mood-arrow">↗</span></button>
+            </div>
+          </section>
+
+          <section class="section-block">
+            <div class="section-heading"><div><div class="eyebrow">HANDPICKED FOR YOU</div><h2>Mulai dari sini</h2><p>Beberapa pilihan untuk membuka sesi belajarmu.</p></div><button class="text-button" data-view="explore">Semua tutorial <span>↗</span></button></div>
+            <div class="tutorial-grid" id="featuredGrid"></div>
+          </section>
+
+          <section class="section-block">
+            <div class="section-heading"><div><div class="eyebrow">YOUR JOURNEY</div><h2>Lanjutkan perjalanan</h2><p>Tutorial yang terakhir kamu buka akan muncul di sini.</p></div><button class="text-button" data-view="progress">Lihat progres <span>↗</span></button></div>
+            <div id="continueGrid" class="tutorial-grid compact-grid"></div>
+          </section>
+          <footer class="site-footer"><span>◈ OceanGlass Academy</span><span>Made for curious minds <i>✦</i></span><button data-action="about">Tentang website</button></footer>
+        </section>
+
+        <section class="view" id="exploreView">
+          <div class="page-intro"><div class="eyebrow"><span class="eyebrow-dot"></span> EXPLORE THE LIBRARY</div><h1>Jelajahi <span>pengetahuan.</span></h1><p>Pilih kategori, cari topik, lalu ikuti langkahnya satu per satu.</p></div>
+          <div class="explore-toolbar glass-panel"><div class="filter-chips" id="filterChips"><button class="filter-chip active" data-filter="all">Semua</button></div><div class="sort-wrap"><span>Urutkan</span><select id="sortSelect" aria-label="Urutkan tutorial"><option value="recommended">Rekomendasi</option><option value="title">Nama A–Z</option><option value="short">Durasi tercepat</option><option value="level">Tingkat kesulitan</option></select></div></div>
+          <div class="result-line"><span id="resultCount">850 tutorial</span><span>Temukan ritmemu sendiri <i>✧</i></span></div>
+          <div class="tutorial-grid" id="exploreGrid"></div>
+          <div class="load-more-wrap"><button class="button-secondary" id="loadMore">Muat tutorial lainnya <span>↓</span></button></div>
+          <div id="emptySearch" class="empty-state hidden"><span>⌕</span><h3>Belum ada yang cocok</h3><p>Coba kata kunci lain atau pilih kategori yang berbeda.</p><button class="button-secondary" id="resetFilters">Reset pencarian</button></div>
+        </section>
+
+        <section class="view" id="savedView">
+          <div class="page-intro"><div class="eyebrow">YOUR PERSONAL COLLECTION</div><h1>Tersimpan <span>untuk nanti.</span></h1><p>Kumpulan tutorial pilihanmu, siap dibuka kapan saja.</p></div>
+          <div class="toolbar-simple"><span id="savedDescription">0 tutorial tersimpan</span><button class="button-secondary" id="clearSaved">Bersihkan daftar</button></div>
+          <div class="tutorial-grid" id="savedGrid"></div><div class="empty-state hidden" id="savedEmpty"><span>♡</span><h3>Belum ada yang disimpan</h3><p>Tekan ikon hati pada kartu tutorial untuk menyimpannya di sini.</p><button class="button-primary" data-view="explore">Jelajahi tutorial ↗</button></div>
+        </section>
+
+        <section class="view" id="progressView">
+          <div class="page-intro"><div class="eyebrow">SMALL STEPS, REAL PROGRESS</div><h1>Perjalanan <span>belajarmu.</span></h1><p>Setiap tutorial yang selesai adalah langkah kecil menuju kemampuan baru.</p></div>
+          <div class="progress-overview glass-panel"><div class="progress-ring" id="progressRing"><div><b id="progressRingNumber">0%</b><small>SELESAI</small></div></div><div class="progress-copy"><div class="eyebrow">YOUR LEARNING REPORT</div><h2>Kamu sedang berkembang.</h2><p id="progressMessage">Mulai dari satu tutorial kecil. Kamu bisa menandai tutorial sebagai selesai setelah mempelajarinya.</p><div class="progress-metrics"><div><b id="progressDone">0</b><small>Tutorial selesai</small></div><div><b id="progressSaved">0</b><small>Disimpan</small></div><div><b id="progressFocus">0m</b><small>Waktu fokus</small></div></div></div></div>
+          <section class="section-block"><div class="section-heading"><div><div class="eyebrow">RECENT ACTIVITY</div><h2>Aktivitas terbaru</h2><p>Tutorial yang baru kamu buka atau selesaikan.</p></div><button class="text-button" id="exportProgress">Ekspor progres ↓</button></div><div id="activityList" class="activity-list"></div></section>
+          <section class="section-block"><div class="section-heading"><div><div class="eyebrow">BY CATEGORY</div><h2>Progres per kategori</h2></div></div><div id="categoryProgress" class="category-progress-list"></div></section>
+        </section>
+
+        <section class="view" id="quizView">
+          <div class="page-intro"><div class="eyebrow">TEST YOUR CURIOSITY</div><h1>Latihan <span>cepat.</span></h1><p>Jawab pertanyaan singkat untuk menguji pemahamanmu. Tidak ada tekanan—ini tempat latihan.</p></div>
+          <div class="quiz-layout"><div class="quiz-main glass-panel" id="quizCard"><div class="quiz-top"><span class="quiz-label">QUICK KNOWLEDGE CHECK</span><span class="quiz-count" id="quizCount">01 / 05</span></div><div class="quiz-progress"><i id="quizProgressBar"></i></div><div class="quiz-question-icon" id="quizIcon">✧</div><h2 id="quizQuestion">Siap menguji pengetahuanmu?</h2><p id="quizSubtitle">Pilih jawaban yang menurutmu paling tepat.</p><div class="quiz-options" id="quizOptions"></div><div class="quiz-bottom"><span id="quizFeedback" aria-live="polite">Pilih salah satu jawaban untuk melanjutkan.</span><button class="button-primary" id="quizNext" disabled>Berikutnya →</button></div></div><aside class="quiz-aside glass-panel"><div class="aside-orb">◈</div><h3>Belajar itu proses.</h3><p>Jawaban yang salah juga bisa jadi pintu untuk memahami konsep dengan lebih baik.</p><div class="quiz-tip"><span>✦</span><p><b>Tip kecil</b><br>Baca pertanyaan dengan tenang dan pilih jawaban yang paling masuk akal.</p></div><button class="button-secondary full-width" id="restartQuiz">Mulai ulang latihan</button></aside></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="bottom-dock glass-panel" aria-label="Akses cepat">
+    <button data-view="home" class="dock-item active" title="Beranda"><span>⌂</span><small>Home</small></button>
+    <button data-view="explore" class="dock-item" title="Jelajahi"><span>⌕</span><small>Explore</small></button>
+    <button data-view="saved" class="dock-item" title="Disimpan"><span>♡</span><small>Saved</small></button>
+    <button data-view="progress" class="dock-item" title="Progres"><span>◴</span><small>Progress</small></button>
+  </div>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <section class="modal glass-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head"><div><div class="eyebrow" id="modalEyebrow">OCEANGLASS ACADEMY</div><h2 id="modalTitle">Tutorial</h2></div><button class="icon-button glass-inset" id="modalClose" aria-label="Tutup">×</button></div>
+      <div id="modalBody" class="modal-body"></div>
+    </section>
+  </div>
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+  <button class="back-to-top glass-panel" id="backToTop" title="Kembali ke atas" aria-label="Kembali ke atas">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!--
+OCEANGLASS ACADEMY — FILE MAP
+index.html contains semantic page structure and IDs used by script.js.
+style.css contains all presentation, theme tokens, responsive rules, and motion.
+script.js contains tutorial data, local state, search, filters, modal, quiz, and export.
+Keep these files in the same folder so the relative links work when opened in a browser.
+-->
